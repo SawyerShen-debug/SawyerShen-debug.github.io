@@ -1171,14 +1171,13 @@ pre .javascript .function {
     margin: 0 -10px;
     padding: 0 10px;
     clear: both;
-    background-color: Black !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-nav {
     display: block !important;
     background-color: Black !important;
-    text-align: center !important;
+    padding-left: 0 !important;
     margin-top: 0px !important;
   }
 }
@@ -1947,7 +1946,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bfbeff;
+  background: #28f7ff;
 }
 .links-of-blogroll {
   font-size: 13px;
