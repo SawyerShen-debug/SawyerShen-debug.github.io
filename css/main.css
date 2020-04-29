@@ -1171,32 +1171,31 @@ pre .javascript .function {
     margin: 0 -10px;
     padding: 0 10px;
     clear: both;
-    color: #000;
+    background-color: Black !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-nav {
     display: block !important;
     background-color: Black !important;
+    text-align: center !important;
+    margin-top: 0px !important;
   }
 }
 @media (min-width: 992px) {
   .site-nav {
     display: block !important;
-    background-color: Black !important;
   }
 }
 .menu {
   margin-top: 40px;
   padding-left: 0;
   text-align: center;
-  background-color: Black;
 }
 .menu .menu-item {
   display: inline-block;
   margin: 0 15px;
   list-style: none;
-  background-color: Black;
 }
 @media screen and (max-width: 767px) {
   .menu .menu-item {
@@ -1948,7 +1947,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3905e3;
+  background: #bfbeff;
 }
 .links-of-blogroll {
   font-size: 13px;
