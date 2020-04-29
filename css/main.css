@@ -1168,9 +1168,10 @@ pre .javascript .function {
 @media (max-width: 767px) {
   .site-nav {
     display: none;
-    margin: 0 100px;
-    padding: 0 100px;
+    margin: 0 100x;
+    padding: 0 10px;
     clear: both;
+    background-color: Black;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1944,7 +1945,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #3353ff;
+  background: #6c0079;
 }
 .links-of-blogroll {
   font-size: 13px;
