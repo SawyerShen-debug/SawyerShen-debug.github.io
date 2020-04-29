@@ -1127,7 +1127,7 @@ pre .javascript .function {
 .site-title {
   display: inline-block;
   vertical-align: top;
-  line-height: 36px;
+  line-height: 32px;
   font-size: 50px;
   font-style: oblique;
   font-weight: normal;
@@ -1186,13 +1186,13 @@ pre .javascript .function {
   }
 }
 .menu {
-  margin-top: 40px;
+  margin-top: 35px;
   padding-left: 0;
   text-align: center;
 }
 .menu .menu-item {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 17px;
   list-style: none;
 }
 @media screen and (max-width: 767px) {
@@ -1202,7 +1202,7 @@ pre .javascript .function {
 }
 .menu .menu-item a {
   display: block;
-  font-size: 15px;
+  font-size: 17px;
   line-height: inherit;
   border-bottom: 1px solid transparent;
   transition-property: border-color;
@@ -1945,7 +1945,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6c0079;
+  background: #28a6ff;
 }
 .links-of-blogroll {
   font-size: 13px;
