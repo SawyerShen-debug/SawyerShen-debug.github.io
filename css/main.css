@@ -1177,22 +1177,26 @@ pre .javascript .function {
 @media (min-width: 768px) and (max-width: 991px) {
   .site-nav {
     display: block !important;
+    background-color: Black !important;
   }
 }
 @media (min-width: 992px) {
   .site-nav {
     display: block !important;
+    background-color: Black !important;
   }
 }
 .menu {
   margin-top: 40px;
   padding-left: 0;
   text-align: center;
+  background-color: Black;
 }
 .menu .menu-item {
   display: inline-block;
   margin: 0 15px;
   list-style: none;
+  background-color: Black;
 }
 @media screen and (max-width: 767px) {
   .menu .menu-item {
@@ -1208,7 +1212,6 @@ pre .javascript .function {
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
-  background: #000;
   color: #fff;
 }
 .menu .menu-item a:hover {
@@ -1945,7 +1948,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cb0ee7;
+  background: #3905e3;
 }
 .links-of-blogroll {
   font-size: 13px;
