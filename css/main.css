@@ -1156,6 +1156,7 @@ pre .javascript .function {
 }
 @media (max-width: 767px) {
   .site-nav-toggle {
+    background: #000;
     display: block;
   }
 }
@@ -1172,7 +1173,6 @@ pre .javascript .function {
     padding: 0 10px;
     clear: both;
     border-top: 1px solid #ddd;
-    background: url("http://chuantu.xyz/t6/731/1588088601x3661913030.jpg");
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1210,6 +1210,9 @@ pre .javascript .function {
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
   color: #fff;
+}
+.menu .menu-item a:hover {
+  color: #dcdcdc;
 }
 .menu .menu-item .fa {
   margin-right: 5px;
@@ -1942,7 +1945,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #44f0df;
+  background: #ffb1ff;
 }
 .links-of-blogroll {
   font-size: 13px;
