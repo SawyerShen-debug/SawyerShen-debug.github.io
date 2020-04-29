@@ -1134,9 +1134,9 @@ pre .javascript .function {
   font-family: Georgia;
 }
 .site-subtitle {
-  margin-top: 10px;
+  margin-top: 2px;
   font-size: 13px;
-  color: #999;
+  color: #000;
 }
 .use-motion .brand {
   opacity: 0;
@@ -1171,21 +1171,17 @@ pre .javascript .function {
     margin: 0 -10px;
     padding: 0 10px;
     clear: both;
-    border-top: 1px solid #ddd;
-    color: Black;
-    text-align: center;
+    color: #000;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-nav {
     display: block !important;
-    color: Black;
   }
 }
 @media (min-width: 992px) {
   .site-nav {
     display: block !important;
-    color: Black;
   }
 }
 .menu {
@@ -1948,7 +1944,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #53ff4d;
+  background: #fc5d3c;
 }
 .links-of-blogroll {
   font-size: 13px;
