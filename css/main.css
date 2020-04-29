@@ -1172,20 +1172,20 @@ pre .javascript .function {
     padding: 0 10px;
     clear: both;
     border-top: 1px solid #ddd;
-    color: #000;
+    color: Black;
     text-align: center;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-nav {
     display: block !important;
-    color: #000;
+    color: Black;
   }
 }
 @media (min-width: 992px) {
   .site-nav {
     display: block !important;
-    color: #000;
+    color: Black;
   }
 }
 .menu {
@@ -1948,7 +1948,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #58c1ec;
+  background: #53ff4d;
 }
 .links-of-blogroll {
   font-size: 13px;
