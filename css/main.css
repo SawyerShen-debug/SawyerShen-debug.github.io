@@ -1128,7 +1128,7 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 70px;
+  font-size: 50px;
   font-weight: normal;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -1184,7 +1184,7 @@ pre .javascript .function {
   }
 }
 .menu {
-  margin-top: 20px;
+  margin-top: 40px;
   padding-left: 0;
   text-align: center;
 }
@@ -1200,7 +1200,7 @@ pre .javascript .function {
 }
 .menu .menu-item a {
   display: block;
-  font-size: 20px;
+  font-size: 15px;
   line-height: inherit;
   border-bottom: 1px solid transparent;
   transition-property: border-color;
@@ -1940,7 +1940,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff16b1;
+  background: #d15b24;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2713,6 +2713,39 @@ pre .javascript .function {
 embed {
   display: block;
   margin: 0px auto 25px auto;
+}
+header.post-header {
+  width: auto !important;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .header {
+    width: auto !important;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    width: auto !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container .main-inner {
+    width: auto !important;
+  }
+}
+@media (max-width: 767px) {
+  .container .main-inner {
+    width: auto !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .content-wrap {
+    width: 100% !important;
+  }
+}
+@media (max-width: 767px) {
+  .content-wrap {
+    width: 100% !important;
+  }
 }
 .custom-logo .site-meta-headline {
   text-align: center;
