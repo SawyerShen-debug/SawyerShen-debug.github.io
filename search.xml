@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>love</title>
+    <url>/2020/05/01/love/</url>
+    <content><![CDATA[<p>和付付的点滴</p>
+]]></content>
+  </entry>
+  <entry>
     <title>数据结构1(Data Structure 1)---数组和栈</title>
-    <url>/2020/04/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AC%94%E8%AE%B01/</url>
+    <url>/2020/04/29/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%841(Data%20Structure%201)---%E6%95%B0%E7%BB%84%E5%92%8C%E6%A0%88/</url>
     <content><![CDATA[<p>数据结构算是学习编程的一个基石，希望我的笔记能够带给你更多的知识和帮助！笔记通篇以java语言为主</p>
 <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组大家或许都不陌生，要想获得一个数组，首先要定义它</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];<span class="comment">//创建数组，里面的数字为数组长度</span></span><br><span class="line"><span class="keyword">int</span> length = arr.length;<span class="comment">//获取数组的长度</span></span><br><span class="line"><span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;<span class="number">90</span>,<span class="number">80</span>,<span class="number">70</span>,<span class="number">60</span>&#125;;<span class="comment">//也可以直接定义数组的同时定义每个数值</span></span><br></pre></td></tr></table></figure>
