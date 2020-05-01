@@ -1157,7 +1157,6 @@ pre .javascript .function {
 @media (max-width: 767px) {
   .site-nav-toggle {
     display: block;
-    background-color: #000 !important;
   }
 }
 .site-nav-toggle button {
@@ -1172,7 +1171,6 @@ pre .javascript .function {
     margin: 0 100x;
     padding: 0 10px;
     clear: both;
-    background-color: #000 !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1946,7 +1944,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2bd7bf;
+  background: #fa5c54;
 }
 .links-of-blogroll {
   font-size: 13px;
