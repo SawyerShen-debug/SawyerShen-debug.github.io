@@ -1176,7 +1176,7 @@ pre .javascript .function {
 @media (min-width: 768px) and (max-width: 991px) {
   .site-nav {
     display: block !important;
-    background-color: #000 !important;
+    background-color: Black !important;
     margin-top: 0px !important;
   }
 }
@@ -1945,7 +1945,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff1f69;
+  background: #ffa16b;
 }
 .links-of-blogroll {
   font-size: 13px;
