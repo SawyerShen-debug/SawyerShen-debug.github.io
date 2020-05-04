@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="数据结构,Data Structure," />
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="ShenXiaoYu">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="链表都是链式结构，链表就像一节节火车车厢，有火车头(head)，还有每一节车厢相应的车号(也就是地址)。 递归就是在一个方法内部调用该方法本身的编程方法 递归基础 Recursive basis注：递归必须某一刻不再调用本身，如果一直调用本身则会栈溢出，所以递归必须有结束条件 1234567891011public static void main(String[] args)&amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构4(Data Structure 4)---递归Recursion">
+<meta property="og:url" content="http://yoursite.com/2020/05/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%844(Data%20Structure%204)---%E9%80%92%E5%BD%92Recursion/index.html">
 <meta property="og:site_name" content="ShenXiaoYu">
+<meta property="og:description" content="链表都是链式结构，链表就像一节节火车车厢，有火车头(head)，还有每一节车厢相应的车号(也就是地址)。 递归就是在一个方法内部调用该方法本身的编程方法 递归基础 Recursive basis注：递归必须某一刻不再调用本身，如果一直调用本身则会栈溢出，所以递归必须有结束条件 1234567891011public static void main(String[] args)&amp;#123;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-28T17:22:09.000Z">
-<meta property="article:modified_time" content="2020-04-28T17:55:34.454Z">
+<meta property="article:published_time" content="2020-05-04T11:49:33.000Z">
+<meta property="article:modified_time" content="2020-05-04T07:12:36.343Z">
 <meta property="article:author" content="ShenXiaoYu">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="Data Structure">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/05/04/数据结构4(Data Structure 4)---递归Recursion/"/>
 
 
 
 
 
-  <title>Tag | ShenXiaoYu</title>
+  <title>数据结构4(Data Structure 4)---递归Recursion | ShenXiaoYu</title>
   
 
 
@@ -270,40 +274,217 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%844(Data%20Structure%204)---%E9%80%92%E5%BD%92Recursion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ShenXiaoYu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/yuyu.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ShenXiaoYu">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                4 tags in total
+          <h1 class="post-title" itemprop="name headline">数据结构4(Data Structure 4)---递归Recursion</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-04T19:49:33+08:00">
+                2020-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  654
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Arithmetic-Basics/" style="font-size: 12px; color: #ccc">Arithmetic Basics</a> <a href="/tags/Data-Structure/" style="font-size: 30px; color: #111">Data Structure</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 30px; color: #111">数据结构</a> <a href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" style="font-size: 12px; color: #ccc">算法基础</a>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p><strong>链表都是链式结构</strong>，链表就像一节节火车车厢，有火车头(head)，还有每一节车厢相应的车号(也就是地址)。</p>
+<p>递归就是在一个方法内部调用该方法本身的编程方法</p>
+<h1 id="递归基础-Recursive-basis"><a href="#递归基础-Recursive-basis" class="headerlink" title="递归基础 Recursive basis"></a>递归基础 Recursive basis</h1><p><strong>注：递归必须某一刻不再调用本身，如果一直调用本身则会栈溢出</strong>，所以递归必须有结束条件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    print(<span class="number">3</span>);<span class="comment">//3 2 1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//简单的递归</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="comment">//添加结束条件</span></span><br><span class="line">    <span class="keyword">if</span>(i&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        System.out.println(i);</span><br><span class="line">        print(i-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="递归运用-Recursive-application"><a href="#递归运用-Recursive-application" class="headerlink" title="递归运用 Recursive application"></a>递归运用 Recursive application</h1><h2 id="斐波那契数列Fibonacci-sequence"><a href="#斐波那契数列Fibonacci-sequence" class="headerlink" title="斐波那契数列Fibonacci sequence"></a>斐波那契数列Fibonacci sequence</h2><p>斐波那契数列：1,1,2,3,5,8,13,21,34,55,89,144…</p>
+<p>如果设如果设<em>an</em>为该数列的第<em>n</em>项（ n∈N*），那么这句话可以写成如下形式：a<del>n</del>=a<del>n-1</del>+a<del>n-2</del></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    <span class="comment">//斐波那契数列:1,1,2,3,5,8,13</span></span><br><span class="line">    <span class="keyword">int</span> i = febonacci(<span class="number">7</span>);</span><br><span class="line">    System.out.println(i);<span class="comment">//13</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//打印第n项斐波那契数列</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">febonacci</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(i==<span class="number">1</span> || i==<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> febonacci(i-<span class="number">1</span>)+febonacci(i-<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="汉诺塔问题Hanoi-problem"><a href="#汉诺塔问题Hanoi-problem" class="headerlink" title="汉诺塔问题Hanoi problem"></a>汉诺塔问题Hanoi problem</h2><p>汉诺塔问题是源于印度一个古老传说的益智玩具。</p>
+<p>有三根柱子，在一根柱子上从下往上按照大小顺序摞着圆盘。现需从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    hanoi(<span class="number">3</span>,<span class="string">'A'</span>,<span class="string">'B'</span>,<span class="string">'C'</span>);</span><br><span class="line">    <span class="comment">/**print结果为</span></span><br><span class="line"><span class="comment">    第1个盘子从A移到C</span></span><br><span class="line"><span class="comment">    第2个盘子从A移到B</span></span><br><span class="line"><span class="comment">    第1个盘子从C移到B</span></span><br><span class="line"><span class="comment">    第3个盘子从A移到C</span></span><br><span class="line"><span class="comment">    第1个盘子从B移到A</span></span><br><span class="line"><span class="comment">    第2个盘子从B移到C</span></span><br><span class="line"><span class="comment">    第1个盘子从A移到C</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">n 共有n个圆盘</span></span><br><span class="line"><span class="comment">from 开始的柱子</span></span><br><span class="line"><span class="comment">in 中间的柱子</span></span><br><span class="line"><span class="comment">to 目标柱子</span></span><br><span class="line"><span class="comment">无论有多少个盘子都认为只有两个。上面的所有的盘子和下面一个盘子</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">hanoi</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">char</span> from,<span class="keyword">char</span> in,<span class="keyword">char</span> to)</span></span>&#123;</span><br><span class="line">    <span class="comment">//只有一个盘子</span></span><br><span class="line">    <span class="keyword">if</span>(n==<span class="number">1</span>)&#123;</span><br><span class="line">        System.out.println(<span class="string">"第1个盘子从"</span>+from+<span class="string">"移到"</span>+to);</span><br><span class="line">    <span class="comment">//无论有多少个盘子都认为只有两个。上面的所有的盘子和下面一个盘子</span></span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">//移动上面所有的盘子到中间位置</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>,from,to,in);</span><br><span class="line">        <span class="comment">//移动下面的盘子</span></span><br><span class="line">        System.out.println(<span class="string">"第"</span>+n+<span class="string">"个盘子从"</span>+from+<span class="string">"移到"</span>+to);</span><br><span class="line">        <span class="comment">//把上面的所有盘子从中间位置移动到目标位置</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>,in,from,to);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>你的支持是我坚持更新的最大动力！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.jpg" alt="ShenXiaoYu WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
+          
+            <a href="/tags/Data-Structure/" rel="tag"># Data Structure</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%843(Data%20Structure%203)---%E9%93%BE%E8%A1%A8linked%20lists/" rel="next" title="数据结构3(Data Structure 3)---链表linked lists">
+                <i class="fa fa-chevron-left"></i> 数据结构3(Data Structure 3)---链表linked lists
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/04/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%801(Arithmetic%20basics1)---%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%20search%20algorithm/" rel="prev" title="算法基础1(Arithmetic basics1)---查找算法 search algorithm">
+                算法基础1(Arithmetic basics1)---查找算法 search algorithm <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -336,8 +517,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -414,6 +604,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#递归基础-Recursive-basis"><span class="nav-text">递归基础 Recursive basis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递归运用-Recursive-application"><span class="nav-text">递归运用 Recursive application</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#斐波那契数列Fibonacci-sequence"><span class="nav-text">斐波那契数列Fibonacci sequence</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#汉诺塔问题Hanoi-problem"><span class="nav-text">汉诺塔问题Hanoi problem</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

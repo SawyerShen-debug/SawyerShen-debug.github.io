@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="算法基础,Arithmetic Basics," />
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="ShenXiaoYu">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="衡量算法优劣的方法时间复杂度 Time complexity123456int total&#x3D;0;int end&#x3D;100;&#x2F;&#x2F;使用for循环计算for(int i&#x3D;1;i&lt;end;i++)&amp;#123;    total+&#x3D;i;&amp;#125;  这个算法的时间复杂度是：T(n)&#x3D;n+1; 12&#x2F;&#x2F;直接计算total&#x3D;(1+end)*end&#x2F;2;  这个算法的时间复杂度是：T(n)&#x3D;1; 语句频度T">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法基础1(Arithmetic basics1)---查找算法 search algorithm">
+<meta property="og:url" content="http://yoursite.com/2020/05/04/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%801(Arithmetic%20basics1)---%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%20search%20algorithm/index.html">
 <meta property="og:site_name" content="ShenXiaoYu">
+<meta property="og:description" content="衡量算法优劣的方法时间复杂度 Time complexity123456int total&#x3D;0;int end&#x3D;100;&#x2F;&#x2F;使用for循环计算for(int i&#x3D;1;i&lt;end;i++)&amp;#123;    total+&#x3D;i;&amp;#125;  这个算法的时间复杂度是：T(n)&#x3D;n+1; 12&#x2F;&#x2F;直接计算total&#x3D;(1+end)*end&#x2F;2;  这个算法的时间复杂度是：T(n)&#x3D;1; 语句频度T">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-28T17:22:09.000Z">
-<meta property="article:modified_time" content="2020-04-28T17:55:34.454Z">
+<meta property="article:published_time" content="2020-05-04T11:51:33.000Z">
+<meta property="article:modified_time" content="2020-05-04T07:12:48.029Z">
 <meta property="article:author" content="ShenXiaoYu">
+<meta property="article:tag" content="算法基础">
+<meta property="article:tag" content="Arithmetic Basics">
 <meta name="twitter:card" content="summary">
 
 
@@ -117,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/05/04/算法基础1(Arithmetic basics1)---查找算法 search algorithm/"/>
 
 
 
 
 
-  <title>Tag | ShenXiaoYu</title>
+  <title>算法基础1(Arithmetic basics1)---查找算法 search algorithm | ShenXiaoYu</title>
   
 
 
@@ -270,40 +274,237 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%801(Arithmetic%20basics1)---%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%20search%20algorithm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ShenXiaoYu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/yuyu.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ShenXiaoYu">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                4 tags in total
+          <h1 class="post-title" itemprop="name headline">算法基础1(Arithmetic basics1)---查找算法 search algorithm</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-04T19:51:33+08:00">
+                2020-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  942
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  3
+                </span>
+              
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Arithmetic-Basics/" style="font-size: 12px; color: #ccc">Arithmetic Basics</a> <a href="/tags/Data-Structure/" style="font-size: 30px; color: #111">Data Structure</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 30px; color: #111">数据结构</a> <a href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" style="font-size: 12px; color: #ccc">算法基础</a>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="衡量算法优劣的方法"><a href="#衡量算法优劣的方法" class="headerlink" title="衡量算法优劣的方法"></a>衡量算法优劣的方法</h1><h2 id="时间复杂度-Time-complexity"><a href="#时间复杂度-Time-complexity" class="headerlink" title="时间复杂度 Time complexity"></a>时间复杂度 Time complexity</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> total=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> end=<span class="number">100</span>;</span><br><span class="line"><span class="comment">//使用for循环计算</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;end;i++)&#123;</span><br><span class="line">    total+=i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个算法的时间复杂度是：T(n)=n+1;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//直接计算</span></span><br><span class="line">total=(<span class="number">1</span>+end)*end/<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这个算法的时间复杂度是：T(n)=1;</p>
+<p><strong>语句频度T(n)：一个算法中语句执行的次数</strong></p>
+<p>一般情况下，算法中的基本操作语句的重复执行数是问题规模n的某个函数，用T(n)表示，若某个辅助函数f(n)，使得当n趋近于无穷大时，T(n)/f(n)的极限值为不等于零的常熟，则称f(n)是T(n)的同数量级函数。记做T(n)=O(f(n))，称O(f(n))为算法的渐进时间复杂度，简称时间复杂度。</p>
+<p>T(n)不同，但时间复杂度可能相同。如：T(n)=n^2^+5n+6与T(n)=3n^2^+3n+2，它们的T(n)不同，但时间复杂度相同，都为O(n^2^)</p>
+<p><strong>时间复杂度中常数项可以忽略，低次项可忽略，系数可忽略</strong></p>
+<h4 id="常见的时间复杂度"><a href="#常见的时间复杂度" class="headerlink" title="常见的时间复杂度"></a><strong>常见的时间复杂度</strong></h4><p><em>常数阶O(1)</em></p>
+<p><em>对数阶O(log2n)</em></p>
+<p><em>线性阶O(n)</em></p>
+<p><em>线性对数阶O(nlog2n)</em></p>
+<p><em>平方阶O(n^2^)</em></p>
+<p><em>立方阶O(n^3^)</em></p>
+<p><em>k次方阶O(n^k^)</em></p>
+<p><em>指数阶O(2^n^)</em></p>
+<p><strong>随着问题规模n的不断增大，时间复杂度不断增大，算法的执行效率越低</strong></p>
+<h4 id="计算时间复杂度的方法"><a href="#计算时间复杂度的方法" class="headerlink" title="计算时间复杂度的方法"></a><strong>计算时间复杂度的方法</strong></h4><ol>
+<li>把语句频度用函数表达出来</li>
+<li>用常数1代替运行时间中的所有加法常数</li>
+<li>修改后的运算次数函数中，只保留最高阶项</li>
+<li>去除最高阶项系数</li>
+</ol>
+<h4 id="平均时间复杂度和最坏时间复杂度"><a href="#平均时间复杂度和最坏时间复杂度" class="headerlink" title="平均时间复杂度和最坏时间复杂度"></a>平均时间复杂度和最坏时间复杂度</h4><p>平均复杂度是指所有可能输入的实例均以等概率出现的情况下，该算法的运行时间</p>
+<p>最坏情况下的时间复杂度称最坏时间复杂度。一般讨论的石军复杂度均是最坏情况下的时间复杂度。这样做的原因是：最坏情况下的时间复杂度是算法在任何输入实例上运行时间的界限，这就保证了算法的运行时间不会比最坏的情况更长。</p>
+<h2 id="空间复杂度-Space-complexity"><a href="#空间复杂度-Space-complexity" class="headerlink" title="空间复杂度 Space complexity"></a>空间复杂度 Space complexity</h2><p>空间复杂度是对一个算法在运行过程中临时占用存储空间大小的量度，记做S(n)=O(f(n))。</p>
+<h1 id="查找算法-search-algorithm"><a href="#查找算法-search-algorithm" class="headerlink" title="查找算法 search algorithm"></a>查找算法 search algorithm</h1><h2 id="线性查找-linear-search"><a href="#线性查找-linear-search" class="headerlink" title="线性查找 linear search"></a>线性查找 linear search</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    <span class="comment">//目标数组</span></span><br><span class="line">    <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">0</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> target = <span class="number">8</span>;<span class="comment">//目标元素</span></span><br><span class="line">    <span class="keyword">int</span> index =-<span class="number">1</span>;<span class="comment">//目标元素的下标</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[i]==target)&#123;</span><br><span class="line">            index=i;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(index);<span class="comment">//4</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="二分法查找-Binary-Search"><a href="#二分法查找-Binary-Search" class="headerlink" title="二分法查找 Binary Search"></a>二分法查找 Binary Search</h2><p><strong>二分法查找用于目标数组是有序的情况</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    <span class="comment">//目标数组</span></span><br><span class="line">    <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> target = <span class="number">8</span>;<span class="comment">//目标元素</span></span><br><span class="line">    <span class="keyword">int</span> begin =<span class="number">0</span>;<span class="comment">//记录开始位置</span></span><br><span class="line">    <span class="keyword">int</span> end =arr.length-<span class="number">1</span>;<span class="comment">//记录结束位置</span></span><br><span class="line">    <span class="keyword">int</span> mid =(begin+end)/<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> index=-<span class="number">1</span>;</span><br><span class="line">    <span class="comment">//循环查找</span></span><br><span class="line">    <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">        <span class="comment">//如果开始位置在结束位置之后或重合，则没有这个元素</span></span><br><span class="line">        <span class="keyword">if</span>(begin&gt;=end)&#123;</span><br><span class="line">            index=-<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//判断中间的元素是不是要查找的元素</span></span><br><span class="line">        <span class="keyword">if</span>(arr[mid]==target)&#123;</span><br><span class="line">            index=mid;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">//判断中间这个元素是不是比目标元素大</span></span><br><span class="line">            <span class="keyword">if</span>(arr[mid]&gt;target)&#123;</span><br><span class="line">                <span class="comment">//把结束位置调整到中间位置前一个位置</span></span><br><span class="line">                end=mid-<span class="number">1</span>;       </span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="comment">//把开始位置调整到中间位置后一个位置</span></span><br><span class="line">                begin=mid+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//取出新的中间位置</span></span><br><span class="line">            mid =(begin+end)/<span class="number">2</span>;</span><br><span class="line">        &#125;	</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(index);<span class="comment">//7</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>你的支持是我坚持更新的最大动力！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.jpg" alt="ShenXiaoYu WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/" rel="tag"># 算法基础</a>
+          
+            <a href="/tags/Arithmetic-Basics/" rel="tag"># Arithmetic Basics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%844(Data%20Structure%204)---%E9%80%92%E5%BD%92Recursion/" rel="next" title="数据结构4(Data Structure 4)---递归Recursion">
+                <i class="fa fa-chevron-left"></i> 数据结构4(Data Structure 4)---递归Recursion
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/05/04/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%802(Arithmetic%20basics2)---%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E4%B9%8B%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F%20exchange%20sort/" rel="prev" title="算法基础2(Arithmetic basics2)---排序算法之交换排序 exchange sort">
+                算法基础2(Arithmetic basics2)---排序算法之交换排序 exchange sort <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -336,8 +537,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -414,6 +624,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#衡量算法优劣的方法"><span class="nav-text">衡量算法优劣的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#时间复杂度-Time-complexity"><span class="nav-text">时间复杂度 Time complexity</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的时间复杂度"><span class="nav-text">常见的时间复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算时间复杂度的方法"><span class="nav-text">计算时间复杂度的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#平均时间复杂度和最坏时间复杂度"><span class="nav-text">平均时间复杂度和最坏时间复杂度</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#空间复杂度-Space-complexity"><span class="nav-text">空间复杂度 Space complexity</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#查找算法-search-algorithm"><span class="nav-text">查找算法 search algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性查找-linear-search"><span class="nav-text">线性查找 linear search</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二分法查找-Binary-Search"><span class="nav-text">二分法查找 Binary Search</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
