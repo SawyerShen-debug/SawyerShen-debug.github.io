@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ShenXiaoYu">
+    
+    <title>
+        
+            基础查询：select语句 |
+        
+        shenxiaoyu
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.png">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"studywithshenxiaoyu.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#663399","avatar":"/images/yuyu.jpg","favicon":"/images/logo.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.png","description":"Dream are dreams without action."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                shenxiaoyu
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/projects"
+                            >
+                                PROJECTS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/projects">PROJECTS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">基础查询：select语句</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/yuyu.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">ShenXiaoYu</span>
+                        
+                            <span class="author-label">巴斯追光者</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-01-27 21:55:14</span>
+        <span class="mobile">2022-01-27 21:55</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/DQL%E8%AF%AD%E8%A8%80/">DQL语言</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="一、select-语句语法"><a href="#一、select-语句语法" class="headerlink" title="一、select 语句语法"></a>一、select 语句语法</h1><ul>
+<li>sql不区分大小写所以select和SELECT相同，但常用大写便于阅读。<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># USE 表名</span><br><span class="line"><span class="keyword">SELECT</span> 查询列表 <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h1 id="二、查询列表的特点"><a href="#二、查询列表的特点" class="headerlink" title="二、查询列表的特点"></a>二、查询列表的特点</h1><ol>
+<li><strong>查询列表</strong>可以是：<ul>
+<li>表中的字段&#x2F;列</li>
+<li>常量值</li>
+<li>表达式</li>
+<li>函数</li>
+</ul>
+</li>
+<li>查询的结果是一个虚拟的表格</li>
+</ol>
+<hr>
+<h1 id="三、select查询列表的具体方法"><a href="#三、select查询列表的具体方法" class="headerlink" title="三、select查询列表的具体方法"></a>三、select查询列表的具体方法</h1><h2 id="1-查询单个列"><a href="#1-查询单个列" class="headerlink" title="1.查询单个列"></a>1.查询单个列</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名 <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="2-查询多个列"><a href="#2-查询多个列" class="headerlink" title="2.查询多个列"></a>2.查询多个列</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名,列名,列名 <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>最后一个列名不加“，”</li>
+</ul>
+<hr>
+<h2 id="3-查询表中所有"><a href="#3-查询表中所有" class="headerlink" title="3.查询表中所有"></a>3.查询表中所有</h2><h3 id="法一：写全列名"><a href="#法一：写全列名" class="headerlink" title="法一：写全列名"></a>法一：写全列名</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">	列名,</span><br><span class="line">	列名,</span><br><span class="line">	列名,</span><br><span class="line">	列名,</span><br><span class="line">	列名,</span><br><span class="line">	列名,</span><br><span class="line">	列名</span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">	表名;</span><br><span class="line">	#用``来区分关键字和名称</span><br></pre></td></tr></table></figure>
+<h3 id="法二：用通配符（-）"><a href="#法二：用通配符（-）" class="headerlink" title="法二：用通配符（ * ）"></a>法二：用通配符（ * ）</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>缺点：顺序与表内顺序相同</li>
+</ul>
+<hr>
+<h2 id="4-查询列中不同的值"><a href="#4-查询列中不同的值" class="headerlink" title="4.查询列中不同的值"></a>4.查询列中不同的值</h2><ul>
+<li>相当于去重</li>
+<li>例：列vend_id中有很多重复的行，则利用关键字 <strong>DISTINCT</strong>:<ul>
+<li><strong>DISTINCT</strong>关键词作用于该词后所有的列，而并非后面的第一个<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> vend_id <span class="keyword">FROM</span> Products;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>注意：不能一次性对多列去重，这样会使表不规则</li>
+</ul>
+<hr>
+<h2 id="5-查询常量值"><a href="#5-查询常量值" class="headerlink" title="5.查询常量值"></a>5.查询常量值</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="number">100</span>;#数值型</span><br><span class="line"><span class="keyword">SELECT</span> &quot;sawyer&quot;;#字符型</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意：字符型和日期型的常量值必须用单或者双引号引起来，数值型不需要</li>
+</ul>
+<hr>
+<h2 id="6-查询表达式"><a href="#6-查询表达式" class="headerlink" title="6.查询表达式"></a>6.查询表达式</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="number">100</span><span class="operator">%</span><span class="number">98</span>;#计算表达式 取余<span class="operator">=</span><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意：不支持++，–</li>
+</ul>
+<hr>
+<h2 id="7-查询函数"><a href="#7-查询函数" class="headerlink" title="7.查询函数"></a>7.查询函数</h2><h3 id="0-语法："><a href="#0-语法：" class="headerlink" title="0.语法："></a>0.语法：</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 函数名(实参列表);#调用函数</span><br></pre></td></tr></table></figure>
+<h3 id="1-利用concat合并"><a href="#1-利用concat合并" class="headerlink" title="1.利用concat合并"></a>1.利用concat合并</h3><ul>
+<li>拼接字符<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> CONCAT(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>);#合并字符 abc</span><br><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">		CONCAT(列名<span class="number">1</span>,列名<span class="number">2</span>) <span class="keyword">AS</span> 一二列 </span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">		表名;</span><br><span class="line">#合并列名<span class="number">1</span>和列名<span class="number">2</span>两列的数据</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="2-利用ifnull来筛别列中null的行"><a href="#2-利用ifnull来筛别列中null的行" class="headerlink" title="2.利用ifnull来筛别列中null的行"></a>2.利用ifnull来筛别列中null的行</h3></li>
+<li>判断某字段或表达式是否为null，如果为null返回固定的值，否则返回原本的值<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">		IFNULL(列名<span class="number">1</span>,数值或字符值)</span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">		表名;</span><br><span class="line">#如果列中有<span class="keyword">null</span>则代替为数值或字符值</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="3-利用isnull"><a href="#3-利用isnull" class="headerlink" title="3.利用isnull"></a>3.利用isnull</h3><ul>
+<li>判断某字段段或表达式是否为null，如果为null返回1，否则返回0<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">		ISNULL(参数列表)</span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">		表名;</span><br><span class="line">#如果列中有<span class="keyword">null</span>则返回<span class="number">1</span>，否则则返回<span class="number">0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="8-起别名"><a href="#8-起别名" class="headerlink" title="8.起别名"></a>8.起别名</h2><h3 id="1-利用AS起别名，对每一个列使用"><a href="#1-利用AS起别名，对每一个列使用" class="headerlink" title="1.利用AS起别名，对每一个列使用"></a>1.利用<strong>AS</strong>起别名，对每一个列使用</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="number">100</span><span class="operator">%</span><span class="number">98</span> <span class="keyword">AS</span> 结果;#显示为：结果 <span class="number">2</span></span><br><span class="line"><span class="keyword">SELECT</span> 列名<span class="number">1</span> <span class="keyword">AS</span> 第一列,列名<span class="number">2</span> <span class="keyword">AS</span> 第二列 <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>便于理解</li>
+<li>如果要查询的字段有重名，便于区分</li>
+</ol>
+<h3 id="2-利用空格，直接写别名"><a href="#2-利用空格，直接写别名" class="headerlink" title="2.利用空格，直接写别名"></a>2.利用空格，直接写别名</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名<span class="number">1</span> 第一列,列名<span class="number">2</span> 第二列 <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-别名若是关键字，需用“-”来区分"><a href="#3-别名若是关键字，需用“-”来区分" class="headerlink" title="3.别名若是关键字，需用“ ”来区分"></a>3.别名若是关键字，需用“ ”来区分</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名<span class="number">1</span> &quot;out put&quot; <span class="keyword">FROM</span> 表名;</span><br><span class="line"><span class="keyword">SELECT</span> 列名<span class="number">1</span> <span class="keyword">AS</span> &quot;out put&quot; <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="9-号的作用"><a href="#9-号的作用" class="headerlink" title="9.+号的作用"></a>9.+号的作用</h2><ul>
+<li>mysql中+号只有运算符的功能：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="number">100</span><span class="operator">+</span><span class="number">90</span>;#两个操作数为数值型，则做加法运算</span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">&#x27;123&#x27;</span><span class="operator">+</span><span class="number">90</span>;#其中一方为字符型，试图将字符型转换为数值型；如果转换成功，则继续做加法运算</span><br><span class="line">#<span class="number">213</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">&#x27;sawyer&#x27;</span><span class="operator">+</span><span class="number">90</span>;#如果转换成功，则将字符型数值转换为<span class="number">0</span></span><br><span class="line">#<span class="number">90</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">null</span><span class="operator">+</span><span class="number">90</span>;#只要其中一方为<span class="keyword">null</span>，则结果肯定为<span class="keyword">null</span></span><br><span class="line">#<span class="keyword">NULL</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="10-限制查询结果"><a href="#10-限制查询结果" class="headerlink" title="10.限制查询结果"></a>10.限制查询结果</h2><ul>
+<li>利用关键字<strong>TOP</strong>来限制返回多少行<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">5</span> 列名 <span class="keyword">FROM</span> 表名;#只返回列中前<span class="number">5</span>行的数据</span><br></pre></td></tr></table></figure></li>
+<li>DB2特有的sql语句 <strong>FETCH FIRST 行数  ROWS ONLY</strong>：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名 <span class="keyword">FROM</span> 表名</span><br><span class="line"><span class="keyword">FETCH</span> <span class="keyword">FIRST</span> <span class="number">5</span> <span class="keyword">ROWS</span> <span class="keyword">ONLY</span>;</span><br></pre></td></tr></table></figure></li>
+<li>oracle需基于<strong>ROWNUM</strong>来计算行：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名 <span class="keyword">FROM</span> 表名</span><br><span class="line"><span class="keyword">WHERE</span> ROWNUM <span class="operator">&lt;=</span><span class="number">5</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>mysql，SQLite，PostgreSQL需使用LIMIT：</li>
+</ul>
+<ol>
+<li><strong>LIMIT 行数</strong>来表示返回多少行<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名 <span class="keyword">FROM</span> 表名</span><br><span class="line">LIMIT <span class="number">5</span>;</span><br></pre></td></tr></table></figure></li>
+<li><strong>LIMIT 行数 OFFSET 某开始行-1</strong>来表示返回多少行<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名 <span class="keyword">FROM</span> 表名</span><br><span class="line">LIMIT <span class="number">5</span> <span class="keyword">OFFSET</span> <span class="number">5</span>;#检索从某行开始，则检索数：某行数<span class="number">-1</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li>简化形式：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名 <span class="keyword">FROM</span> 表名</span><br><span class="line">LIMIT <span class="number">4</span>,<span class="number">3</span>;#逗号前为<span class="keyword">OFFSET</span>后的数，逗号后为LIMIT后的数（与上一个是反着表示的）</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="11-显示表的结构"><a href="#11-显示表的结构" class="headerlink" title="11.显示表的结构"></a>11.显示表的结构</h2><ul>
+<li>利用<strong>DESC</strong><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DESC</span> 表名;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/DQL%E8%AF%AD%E8%A8%80/">#DQL语言</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/01/29/2.DQL%E8%AF%AD%E8%A8%80/%E8%BF%87%E6%BB%A4%E6%95%B0%E6%8D%AE%EF%BC%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2where%E5%AD%90%E5%8F%A5/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">过滤数据：条件查询where子句</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/01/24/1.MySQL%E7%9B%B8%E5%85%B3%E5%9F%BA%E7%A1%80/MySQL%E7%9A%84%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">MySql的介绍和使用</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">ShenXiaoYu</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81select-%E8%AF%AD%E5%8F%A5%E8%AF%AD%E6%B3%95"><span class="nav-text">一、select 语句语法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%9F%A5%E8%AF%A2%E5%88%97%E8%A1%A8%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-text">二、查询列表的特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81select%E6%9F%A5%E8%AF%A2%E5%88%97%E8%A1%A8%E7%9A%84%E5%85%B7%E4%BD%93%E6%96%B9%E6%B3%95"><span class="nav-text">三、select查询列表的具体方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%9F%A5%E8%AF%A2%E5%8D%95%E4%B8%AA%E5%88%97"><span class="nav-text">1.查询单个列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%9F%A5%E8%AF%A2%E5%A4%9A%E4%B8%AA%E5%88%97"><span class="nav-text">2.查询多个列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%9F%A5%E8%AF%A2%E8%A1%A8%E4%B8%AD%E6%89%80%E6%9C%89"><span class="nav-text">3.查询表中所有</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%95%E4%B8%80%EF%BC%9A%E5%86%99%E5%85%A8%E5%88%97%E5%90%8D"><span class="nav-text">法一：写全列名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%95%E4%BA%8C%EF%BC%9A%E7%94%A8%E9%80%9A%E9%85%8D%E7%AC%A6%EF%BC%88-%EF%BC%89"><span class="nav-text">法二：用通配符（ * ）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%9F%A5%E8%AF%A2%E5%88%97%E4%B8%AD%E4%B8%8D%E5%90%8C%E7%9A%84%E5%80%BC"><span class="nav-text">4.查询列中不同的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%9F%A5%E8%AF%A2%E5%B8%B8%E9%87%8F%E5%80%BC"><span class="nav-text">5.查询常量值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%9F%A5%E8%AF%A2%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-text">6.查询表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%9F%A5%E8%AF%A2%E5%87%BD%E6%95%B0"><span class="nav-text">7.查询函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#0-%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="nav-text">0.语法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%A9%E7%94%A8concat%E5%90%88%E5%B9%B6"><span class="nav-text">1.利用concat合并</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%A9%E7%94%A8ifnull%E6%9D%A5%E7%AD%9B%E5%88%AB%E5%88%97%E4%B8%ADnull%E7%9A%84%E8%A1%8C"><span class="nav-text">2.利用ifnull来筛别列中null的行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%88%A9%E7%94%A8isnull"><span class="nav-text">3.利用isnull</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E8%B5%B7%E5%88%AB%E5%90%8D"><span class="nav-text">8.起别名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%A9%E7%94%A8AS%E8%B5%B7%E5%88%AB%E5%90%8D%EF%BC%8C%E5%AF%B9%E6%AF%8F%E4%B8%80%E4%B8%AA%E5%88%97%E4%BD%BF%E7%94%A8"><span class="nav-text">1.利用AS起别名，对每一个列使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%A9%E7%94%A8%E7%A9%BA%E6%A0%BC%EF%BC%8C%E7%9B%B4%E6%8E%A5%E5%86%99%E5%88%AB%E5%90%8D"><span class="nav-text">2.利用空格，直接写别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%88%AB%E5%90%8D%E8%8B%A5%E6%98%AF%E5%85%B3%E9%94%AE%E5%AD%97%EF%BC%8C%E9%9C%80%E7%94%A8%E2%80%9C-%E2%80%9D%E6%9D%A5%E5%8C%BA%E5%88%86"><span class="nav-text">3.别名若是关键字，需用“ ”来区分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%8F%B7%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-text">9.+号的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E9%99%90%E5%88%B6%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C"><span class="nav-text">10.限制查询结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E6%98%BE%E7%A4%BA%E8%A1%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-text">11.显示表的结构</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>

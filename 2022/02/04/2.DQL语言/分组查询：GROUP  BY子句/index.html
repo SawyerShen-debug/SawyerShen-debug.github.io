@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ShenXiaoYu">
+    
+    <title>
+        
+            分组查询：GROUP BY子句 |
+        
+        shenxiaoyu
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.png">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"studywithshenxiaoyu.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#663399","avatar":"/images/yuyu.jpg","favicon":"/images/logo.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.png","description":"Dream are dreams without action."},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                shenxiaoyu
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/projects"
+                            >
+                                PROJECTS
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/projects">PROJECTS</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">分组查询：GROUP BY子句</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/yuyu.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">ShenXiaoYu</span>
+                        
+                            <span class="author-label">巴斯追光者</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-02-03 21:55:14</span>
+        <span class="mobile">2022-02-03 21:55</span>
+    </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/DQL%E8%AF%AD%E8%A8%80/">DQL语言</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h1 id="一、GROUP-BY子句语法"><a href="#一、GROUP-BY子句语法" class="headerlink" title="一、GROUP BY子句语法"></a>一、GROUP BY子句语法</h1><ul>
+<li>可以使用GROUP BY子句将表中的数据分成若干组<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	分组函数,列(要求出现在<span class="keyword">group</span> <span class="keyword">by</span>的后面)</span><br><span class="line"><span class="keyword">FROM</span>	表名</span><br><span class="line">【<span class="keyword">WHERE</span>	筛选条件】</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	分组的列表</span><br><span class="line">【<span class="keyword">ORDER</span> <span class="keyword">BY</span>	排序列表 #<span class="keyword">ASC</span><span class="operator">/</span><span class="keyword">DESC</span>】;</span><br></pre></td></tr></table></figure></li>
+<li>注意：查询列表必须特殊，要求是分组函数和group by后面出现的字段</li>
+</ul>
+<hr>
+<h1 id="二、分组查询的具体方法"><a href="#二、分组查询的具体方法" class="headerlink" title="二、分组查询的具体方法"></a>二、分组查询的具体方法</h1><ol>
+<li>分组查询中筛选条件分为两类：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>区别</th>
+<th>数据源</th>
+<th>位置｜</th>
+<th>关键字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>分组前筛选</td>
+<td>原始表</td>
+<td>group by子句的前面</td>
+<td>where</td>
+</tr>
+<tr>
+<td>分组后筛选</td>
+<td>分组后的结果集</td>
+<td>group by子句的后面</td>
+<td>having</td>
+</tr>
+</tbody></table>
+<ul>
+<li>1.分组函数做条件肯定放在having子句中</li>
+<li>2.能用分组前筛选的，尽量用分组前筛选</li>
+</ul>
+<ol start="2">
+<li>group by子句支持单个字段分组，多个字段分组(多个字段之间用逗号隔开没有顺序要求)，表达式和函数</li>
+<li>也可以添加排序（排序放在分组查询最后）</li>
+</ol>
+<hr>
+<h2 id="1-基本分组查询"><a href="#1-基本分组查询" class="headerlink" title="1.基本分组查询"></a>1.基本分组查询</h2><ul>
+<li><p>例1: 查询每个工种的最高工资</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">MAX</span>(salary),job_id</span><br><span class="line"><span class="keyword">FROM</span>	employees</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	job_id;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>例2: 查询每个位置上的部门个数</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">COUNT</span>(<span class="operator">*</span>),location_id</span><br><span class="line"><span class="keyword">FROM</span>	departments</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	location_id;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="2-添加分组前的筛选条件"><a href="#2-添加分组前的筛选条件" class="headerlink" title="2.添加分组前的筛选条件"></a>2.添加分组前的筛选条件</h2><ul>
+<li><p>例1: 查询邮箱中包含a的字符的，每个部门的平均工资</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">AVG</span>(salary),department_id</span><br><span class="line"><span class="keyword">FROM</span>	employees</span><br><span class="line"><span class="keyword">WHERE</span>	departmen_id <span class="keyword">LIKE</span> <span class="string">&#x27;%a%&#x27;</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	department_id;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>例2: 查询有奖金的每个领导手下员工的最高工资</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">MAX</span>(salary),manager_id</span><br><span class="line"><span class="keyword">FROM</span>	employees</span><br><span class="line"><span class="keyword">WHERE</span>	commission_pct <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	manager_id;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="3-添加分组后的筛选条件"><a href="#3-添加分组后的筛选条件" class="headerlink" title="3.添加分组后的筛选条件"></a>3.添加分组后的筛选条件</h2><ul>
+<li><p><strong>HAVING</strong>是对分组后的数据进行筛选</p>
+</li>
+<li><p>例1: 查询哪个部门的员工个数&gt;2</p>
+</li>
+<li><p>1.查询每个部门的员工个数</p>
+</li>
+<li><p>2.根据1的结果进行筛选，查询哪个部门的员工个数&gt;2</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">COUNT</span>(<span class="operator">*</span>),department_id</span><br><span class="line"><span class="keyword">FROM</span>	employees</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	department_id</span><br><span class="line"><span class="keyword">HAVING</span>	<span class="built_in">COUNT</span>(<span class="operator">*</span>)<span class="operator">&gt;</span><span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>例2: 查询每个工种有奖金的员工的最高的工资&gt;12000的工种编号和最高工资</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">MAX</span>(salary),job_id</span><br><span class="line"><span class="keyword">FROM</span>	employees</span><br><span class="line"><span class="keyword">WHERE</span>	commission_pct <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	job_id</span><br><span class="line"><span class="keyword">HAVING</span>	<span class="built_in">MAX</span>(salary)<span class="operator">&gt;</span><span class="number">12000</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>例3: 查询领导编号&gt;102的每个领导手下的最低工资&gt;5000的领导编号是哪个，以及最低工资</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">MIN</span>(salary),manager_id</span><br><span class="line"><span class="keyword">FROM</span>	employees</span><br><span class="line"><span class="keyword">WHERE</span>	manager_id<span class="operator">&gt;</span><span class="number">102</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	manager_id</span><br><span class="line"><span class="keyword">HAVING</span>	<span class="built_in">MIN</span>(salary)<span class="operator">&gt;</span><span class="number">5000</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="4-按表达式或函数分组"><a href="#4-按表达式或函数分组" class="headerlink" title="4.按表达式或函数分组"></a>4.按表达式或函数分组</h2><ul>
+<li>例: 按员工姓名的长度分组，查询每一组的员工个数，筛选员工个数&gt;5的有哪些<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">COUNT</span>(<span class="operator">*</span>),LENGTH(last_name) <span class="keyword">AS</span> 姓名长度</span><br><span class="line"><span class="keyword">FROM</span>	employees</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	姓名长度</span><br><span class="line"><span class="keyword">HAVING</span>	<span class="built_in">COUNT</span>(<span class="operator">*</span>)<span class="operator">&gt;</span><span class="number">5</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="5-按多个字段分组"><a href="#5-按多个字段分组" class="headerlink" title="5.按多个字段分组"></a>5.按多个字段分组</h2><ul>
+<li>例: 查询每个部门每个工种的员工的平均工资<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">AVG</span>(salary),department_id,job_id</span><br><span class="line"><span class="keyword">FROM</span>	employees</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	job_id,department_id;#可以变换位置</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="6-添加排序"><a href="#6-添加排序" class="headerlink" title="6.添加排序"></a>6.添加排序</h2><ul>
+<li>例: 查询每个部门每个工种的员工的平均工资，并且按平均工资的高低显示<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">AVG</span>(salary),department_id,job_id</span><br><span class="line"><span class="keyword">FROM</span>	employees</span><br><span class="line">#<span class="keyword">WHERE</span>	department_id <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span>	job_id,department_id</span><br><span class="line">#<span class="keyword">HAVING</span>	<span class="built_in">AVG</span>(salary)<span class="operator">&gt;</span><span class="number">10000</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span>	<span class="built_in">AVG</span>(salary) <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        </div>
+
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/DQL%E8%AF%AD%E8%A8%80/">#DQL语言</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2022/02/06/2.DQL%E8%AF%AD%E8%A8%80/%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2%EF%BC%9A%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">连接查询：多表查询</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/01/31/2.DQL%E8%AF%AD%E8%A8%80/%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">SQL中常见函数</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;评论</i>
+    </div>
+    
+
+        
+            
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">ShenXiaoYu</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81GROUP-BY%E5%AD%90%E5%8F%A5%E8%AF%AD%E6%B3%95"><span class="nav-text">一、GROUP BY子句语法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%85%B7%E4%BD%93%E6%96%B9%E6%B3%95"><span class="nav-text">二、分组查询的具体方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="nav-text">1.基本分组查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%B7%BB%E5%8A%A0%E5%88%86%E7%BB%84%E5%89%8D%E7%9A%84%E7%AD%9B%E9%80%89%E6%9D%A1%E4%BB%B6"><span class="nav-text">2.添加分组前的筛选条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%B7%BB%E5%8A%A0%E5%88%86%E7%BB%84%E5%90%8E%E7%9A%84%E7%AD%9B%E9%80%89%E6%9D%A1%E4%BB%B6"><span class="nav-text">3.添加分组后的筛选条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%8C%89%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%88%96%E5%87%BD%E6%95%B0%E5%88%86%E7%BB%84"><span class="nav-text">4.按表达式或函数分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%8C%89%E5%A4%9A%E4%B8%AA%E5%AD%97%E6%AE%B5%E5%88%86%E7%BB%84"><span class="nav-text">5.按多个字段分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%B7%BB%E5%8A%A0%E6%8E%92%E5%BA%8F"><span class="nav-text">6.添加排序</span></a></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+
+</body>
+</html>
